@@ -8,7 +8,7 @@ const session = require('express-session');
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://sam:sssU9989@chatwithme-lzmgx.mongodb.net/test?retryWrites=true&w=majority";
 
-var mongoUtil = require(__dirname + "\\database.js")
+var mongoUtil = require(__dirname + "/database.js")
 
 mongoUtil.connectToServer( function( err, client ) {
   if (err) throw (err);
