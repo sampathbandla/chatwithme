@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat With Me! </title>
+
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/spinner.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script>
+    var socket = io();
+    </script>
+
+    <script>
+    // window.onbeforeunload = function (e) {
+    //     e = e || window.event;
+    
+    //     // For IE and Firefox prior to version 4
+    //     if (e) {
+    //         e.returnValue = 'Sure?';
+    //     }
+    
+    //     // For Safari
+    //     return 'Sure?';
+    // };
+    </script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/chat.js"></script>
+</head>
+<body onload="windowloaded()">
+    <div class="header">
+        <div class="left">
+            <h1 class="title">Chat With Me</h1>
+        </div>
+        <div class="center">
+            <input readonly="readonly" onclick="copylink(this)" type="text" id="urllink">
+        </div>
+        <div class="right">
+            <div class="account">
+                <img id="profilepic" src="" class="img" alt="">
+                <p id="usernameheader"></p>
+            </div>
+        </div>
+    </div>
+    <div id="spinner" class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+
+    <div id="setup" class="setup">
+        
+        <p style="color: white;">Select Profile pic</p>
+        <div class="userpic">
+                <img src="/images/users/user1.png" onclick="selected(this.id)"  id="0" class="user selected" alt="">
+                <img src="/images/users/user2.png" onclick="selected(this.id)"  id="1" class="user" alt="">
+                <img src="/images/users/user3.png" onclick="selected(this.id)"  id="2" class="user" alt="">
+                <img src="/images/users/user4.png" onclick="selected(this.id)"  id="3" class="user" alt="">
+                <img src="/images/users/user5.png" onclick="selected(this.id)"  id="4" class="user" alt="">
+                <img src="/images/users/user6.png" onclick="selected(this.id)"  id="5" class="user" alt="">
+                <img src="/images/users/user7.png" onclick="selected(this.id)"  id="6" class="user" alt="">
+                <img src="/images/users/user8.png" onclick="selected(this.id)"  id="7" class="user" alt="">
+                <img src="/images/users/user9.png" onclick="selected(this.id)"  id="8" class="user" alt="">
+            </div>
+        <input type="text" class="username" id="username" placeholder="Name to Display"><br>
+        <button class="submit" class="submit" onclick="submit()" id="">Submit</button>
+    
+    
+    </div>
+
+    <div id="maindiv" class="maindiv">
+        <div class="calldiv">
+
+        </div>
+        <div  class="chatdiv">
+            <div class="chat_header">
+                <div class="user_count">
+                    <p class="label">Total Users:</p>
+                    <p class="count">22</p>
+                </div>
+            </div>
+            <div id="chat" class="chat">
+                
+            </div>
+            <div class="chat-sent">
+                <input type="text" placeholder="Type here..." id="sent_msg">
+                <button id="sendbtn" onclick="sendmsg()">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

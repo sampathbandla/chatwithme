@@ -1,0 +1,307 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #3E4489;
+}
+
+html input, body input {
+  color: black;
+}
+
+html *, body * {
+  color: white;
+}
+
+html .header, body .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+html .header .title, body .header .title {
+  font-weight: 400;
+  color: white;
+}
+
+html .header .center, body .header .center {
+  width: 50%;
+}
+
+html .header .center input, body .header .center input {
+  width: 100%;
+  border: none;
+  padding: 5px 20px;
+  text-align: center;
+  color: white;
+  background: none;
+  border: solid 1px white;
+  border-radius: 20px;
+  display: none;
+}
+
+html .header .right, body .header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .header .right .account, body .header .right .account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .header .right .account p, body .header .right .account p {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+html .setup, body .setup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html .setup .username, body .setup .username {
+  width: 200px;
+  border-radius: 20px;
+  background: white;
+  color: black;
+  border: solid 0.3px grey;
+  padding: 5px 10px;
+}
+
+html .setup .submit, body .setup .submit {
+  background: transparent;
+  color: white;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+html .setup .userpic, body .setup .userpic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .setup .userpic .user, body .setup .userpic .user {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+html .setup .userpic .selected, body .setup .userpic .selected {
+  border: solid 5px white;
+  border-radius: 50%;
+}
+
+.spinner {
+  display: none;
+}
+
+.maindiv {
+  margin: 20px 0px;
+  height: 70%;
+  width: 100%;
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.maindiv .calldiv {
+  width: 60%;
+}
+
+.maindiv .chatdiv {
+  width: 30%;
+  height: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maindiv .chatdiv .chat_header {
+  background: #ffd04c;
+}
+
+.maindiv .chatdiv .chat_header * {
+  color: black;
+  font-size: 12px;
+}
+
+.maindiv .chatdiv .chat_header .user_count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.maindiv .chatdiv .chat-sent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.maindiv .chatdiv .chat-sent #sent_msg {
+  background: white;
+  border: solid 1px black;
+  width: 100%;
+}
+
+.maindiv .chatdiv .chat-sent #sendbtn {
+  background: #ffd04c;
+  color: black;
+  border: solid 1px black;
+  padding: 5px;
+}
+
+.maindiv .chatdiv .chat {
+  height: 100%;
+  overflow: auto;
+}
+
+.maindiv .chatdiv .chat img {
+  width: 25px;
+}
+
+.maindiv .chatdiv .chat * {
+  color: black;
+}
+
+.maindiv .chatdiv .chat .from {
+  background-color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0px;
+}
+
+.maindiv .chatdiv .chat .from .div1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.maindiv .chatdiv .chat .from .div1 .time {
+  font-size: 10px;
+}
+
+.maindiv .chatdiv .chat .from .div2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maindiv .chatdiv .chat .from .div2 .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.maindiv .chatdiv .chat .from .div2 .msg {
+  font-size: 12px;
+}
+
+.maindiv .chatdiv .chat .to {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0px;
+}
+
+.maindiv .chatdiv .chat .to .div1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.maindiv .chatdiv .chat .to .div1 .time {
+  font-size: 10px;
+}
+
+.maindiv .chatdiv .chat .to .div2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maindiv .chatdiv .chat .to .div2 .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.maindiv .chatdiv .chat .to .div2 .msg {
+  font-size: 12px;
+}
+/*# sourceMappingURL=chat.css.map */
