@@ -80,8 +80,8 @@ mongoUtil.connectToServer( function( err, client ) {
 // let local_port = 8080;
 
 
-http.listen(3000, function(){
-  console.log('listening on http://127.0.0.1:3000');
+http.listen(process.env.PORT, function(){
+  console.log('listening on http://127.0.0.1:'  + process.env.PORT);
 });
 
 
