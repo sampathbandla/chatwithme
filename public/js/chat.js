@@ -81,6 +81,11 @@ function append_msg(type,img,time,name,msg)
                         <p class="msg">' + msg + '</p>\
                     </div>\
                     </div>')
+  scrollToBottom();
+}
+function scrollToBottom() {
+  var messages = document.getElementById("chat");
+  messages.scrollTop = messages.scrollHeight;
 }
 function copylink(inputurl)
 {
