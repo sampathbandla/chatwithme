@@ -11,7 +11,6 @@ body {
 html, body {
   width: 100%;
   height: 100%;
-  background: #3E4489;
 }
 
 html input, body input {
@@ -19,20 +18,21 @@ html input, body input {
 }
 
 html *, body * {
-  color: white;
+  color: black;
 }
 
 html .header, body .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #3E4489;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
 }
 
 html .header .title, body .header .title {
@@ -49,11 +49,10 @@ html .header .center input, body .header .center input {
   border: none;
   padding: 5px 20px;
   text-align: center;
-  color: white;
-  background: none;
+  background: white;
+  color: black;
   border: solid 1px white;
-  border-radius: 20px;
-  display: none;
+  border-radius: 10px;
 }
 
 html .header .right, body .header .right {
@@ -72,8 +71,9 @@ html .header .right .account, body .header .right .account {
 }
 
 html .header .right .account p, body .header .right .account p {
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 18px;
+  color: white;
 }
 
 html .setup, body .setup {
@@ -93,20 +93,28 @@ html .setup, body .setup {
 }
 
 html .setup .username, body .setup .username {
-  width: 200px;
+  width: 250px;
   border-radius: 20px;
   background: white;
   color: black;
-  border: solid 0.3px grey;
+  border: solid 1px black;
   padding: 5px 10px;
 }
 
 html .setup .submit, body .setup .submit {
-  background: transparent;
   color: white;
   border: none;
-  margin-left: 20px;
   cursor: pointer;
+  padding: 8px 20px;
+  background-color: #3e4489;
+  border-radius: 20px;
+  width: 150px;
+}
+
+html .setup .submit:hover, body .setup .submit:hover {
+  background: #6c78ff;
+  -webkit-box-shadow: 0 3px 6px #0000005e;
+          box-shadow: 0 3px 6px #0000005e;
 }
 
 html .setup .userpic, body .setup .userpic {
@@ -126,7 +134,7 @@ html .setup .userpic .user, body .setup .userpic .user {
 }
 
 html .setup .userpic .selected, body .setup .userpic .selected {
-  border: solid 5px white;
+  border: solid 5px #ff7f7f;
   border-radius: 50%;
 }
 
@@ -147,9 +155,13 @@ html .setup .userpic .selected, body .setup .userpic .selected {
   width: 60%;
 }
 
-.maindiv .chatdiv {
-  width: 30%;
-  height: 100%;
+.chatdiv {
+  position: fixed;
+  -webkit-box-shadow: 0 3px 6px #0000004a;
+          box-shadow: 0 3px 6px #0000004a;
+  bottom: 0;
+  right: 10px;
+  width: 300px;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,56 +172,60 @@ html .setup .userpic .selected, body .setup .userpic .selected {
           flex-direction: column;
 }
 
-.maindiv .chatdiv .chat_header {
-  background: #ffd04c;
+.chatdiv .chat_header {
+  cursor: pointer;
+  background: #9a9a9a54;
+  border: solid 1px gray;
 }
 
-.maindiv .chatdiv .chat_header * {
+.chatdiv .chat_header * {
   color: black;
   font-size: 12px;
 }
 
-.maindiv .chatdiv .chat_header .user_count {
+.chatdiv .chat_header .user_count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
 }
 
-.maindiv .chatdiv .chat-sent {
+.chatdiv .chat-sent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.maindiv .chatdiv .chat-sent #sent_msg {
+.chatdiv .chat-sent #sent_msg {
   background: white;
   border: solid 1px black;
   width: 100%;
-}
-
-.maindiv .chatdiv .chat-sent #sendbtn {
-  background: #ffd04c;
-  color: black;
-  border: solid 1px black;
   padding: 5px;
 }
 
-.maindiv .chatdiv .chat {
+.chatdiv .chat-sent #sendbtn {
+  background: #ffd04c;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.chatdiv .chat {
+  border: solid 1px gray;
   height: 100%;
   overflow: auto;
 }
 
-.maindiv .chatdiv .chat img {
+.chatdiv .chat img {
   width: 25px;
 }
 
-.maindiv .chatdiv .chat * {
+.chatdiv .chat * {
   color: black;
 }
 
-.maindiv .chatdiv .chat .from {
+.chatdiv .chat .from {
   background-color: #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,7 +236,7 @@ html .setup .userpic .selected, body .setup .userpic .selected {
   padding: 5px 0px;
 }
 
-.maindiv .chatdiv .chat .from .div1 {
+.chatdiv .chat .from .div1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,11 +250,11 @@ html .setup .userpic .selected, body .setup .userpic .selected {
   margin-right: 10px;
 }
 
-.maindiv .chatdiv .chat .from .div1 .time {
+.chatdiv .chat .from .div1 .time {
   font-size: 10px;
 }
 
-.maindiv .chatdiv .chat .from .div2 {
+.chatdiv .chat .from .div2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,16 +264,16 @@ html .setup .userpic .selected, body .setup .userpic .selected {
           flex-direction: column;
 }
 
-.maindiv .chatdiv .chat .from .div2 .name {
+.chatdiv .chat .from .div2 .name {
   font-size: 15px;
   font-weight: 600;
 }
 
-.maindiv .chatdiv .chat .from .div2 .msg {
+.chatdiv .chat .from .div2 .msg {
   font-size: 12px;
 }
 
-.maindiv .chatdiv .chat .to {
+.chatdiv .chat .to {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,7 +284,7 @@ html .setup .userpic .selected, body .setup .userpic .selected {
   padding: 5px 0px;
 }
 
-.maindiv .chatdiv .chat .to .div1 {
+.chatdiv .chat .to .div1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,11 +298,11 @@ html .setup .userpic .selected, body .setup .userpic .selected {
   margin-right: 10px;
 }
 
-.maindiv .chatdiv .chat .to .div1 .time {
+.chatdiv .chat .to .div1 .time {
   font-size: 10px;
 }
 
-.maindiv .chatdiv .chat .to .div2 {
+.chatdiv .chat .to .div2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,12 +312,12 @@ html .setup .userpic .selected, body .setup .userpic .selected {
           flex-direction: column;
 }
 
-.maindiv .chatdiv .chat .to .div2 .name {
+.chatdiv .chat .to .div2 .name {
   font-size: 15px;
   font-weight: 600;
 }
 
-.maindiv .chatdiv .chat .to .div2 .msg {
+.chatdiv .chat .to .div2 .msg {
   font-size: 12px;
 }
 /*# sourceMappingURL=chat.css.map */

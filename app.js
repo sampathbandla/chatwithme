@@ -4,6 +4,7 @@ const app = new express()
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const session = require('express-session');
+require('dotenv').config()
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://sam:sssU9989@chatwithme-lzmgx.mongodb.net/test?retryWrites=true&w=majority";

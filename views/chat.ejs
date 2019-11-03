@@ -79,8 +79,8 @@
         <div class="calldiv">
 
         </div>
-        <div  class="chatdiv">
-            <div class="chat_header">
+        <div style="height: 50%;"  id="chatdiv"  class="chatdiv">
+            <div class="chat_header" onclick="hidechat()">
                 <div class="user_count">
                     <p class="label">Total Users:</p>
                     <p class="count">22</p>
@@ -89,7 +89,7 @@
             <div id="chat" class="chat">
                 
             </div>
-            <div class="chat-sent">
+            <div id="chatsent" class="chat-sent">
                 <input type="text" placeholder="Type here..." id="sent_msg">
                 <button id="sendbtn" onclick="sendmsg()">Send</button>
             </div>

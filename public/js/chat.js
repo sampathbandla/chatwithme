@@ -21,7 +21,7 @@ function sendmsg()
   var today = new Date();
   var timenow = today.getHours() + ":" + today.getMinutes();
   var msg = document.getElementById("sent_msg").value
-  if(msg.length < 0 || msg.length > 200)
+  if(msg.length == 0 || msg.length > 200)
   {
     alert("Message should be Greater than 0 letters and less than 200 letters");
     return;
@@ -34,6 +34,27 @@ socket.on("recive-msg",(data) => {
   if(data.socketid != socket.id)
   append_msg("from",data.img,data.time,data.name,data.msg);
 });
+
+
+
+
+function hidechat()
+{
+  $("#chat").toggle();
+  $("#chatsent").toggle();
+  if(document.getElementById("chatdiv").style.height == '50%')
+  {
+    document.getElementById("chatdiv").style.height = "auto";
+  }
+  else
+  {
+    document.getElementById("chatdiv").style.height = "50%";
+  }
+}
+
+
+
+
 function submit()
 {
   if(document.getElementById("username").value == "")

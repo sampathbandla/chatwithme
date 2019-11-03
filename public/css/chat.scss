@@ -7,21 +7,22 @@ html,body
 {
     width: 100%;
     height: 100%;
-    background: #3E4489;
+    // background: #3E4489;
     input
     {
         color: black;
     }
     *
     {
-        color: white;
+        color: black;
     }
     .header
     {
         display: flex;
+        background: #3E4489;
         align-items: center;
         justify-content: space-between;
-        padding: 20px;
+        padding: 10px;
         .title
         {
             font-weight:400;
@@ -37,11 +38,11 @@ html,body
                 border: none;
                 padding: 5px 20px;
                 text-align: center;
-                color: white;
-                background: none;
+                background: white;
+                color: black;
                 border: solid 1px white;
-                border-radius: 20px;
-                display: none;
+                // display: none;
+                border-radius: 10px;
             }
         }
         .right
@@ -53,8 +54,9 @@ html,body
                 align-items: center;
                 p
                 {
-                    margin-left: 20px;
+                    margin-left: 10px;
                     font-size: 18px;
+                    color: white;
                 }
             }
         }
@@ -67,20 +69,27 @@ html,body
         flex-direction: column;
         .username
         {
-            width: 200px;
+            width: 250px;
             border-radius: 20px;
             background: white;
             color: black;
-            border: solid 0.3px grey;
+            border: solid 1px black;
             padding: 5px 10px;
         }
         .submit
         {
-            background: transparent;
             color: white;
             border: none;
-            margin-left: 20px;
             cursor: pointer;
+            padding: 8px 20px;
+            background-color: #3e4489;
+            border-radius: 20px;
+            width: 150px;
+        }
+        .submit:hover
+        {
+            background: rgb(108, 120, 255);
+            box-shadow: 0 3px 6px #0000005e;
         }
         .userpic
         {
@@ -95,7 +104,7 @@ html,body
             }
             .selected
             {
-                border: solid 5px white;
+                border: solid 5px #ff7f7f;
                 border-radius: 50%;
             }
         }
@@ -118,16 +127,26 @@ html,body
     {
         width: 60%;
     }
-    .chatdiv
+    
+}
+
+
+.chatdiv
     {
-        width: 30%;
-        height: 100%;
+        position: fixed;
+        box-shadow: 0 3px 6px #0000004a;
+        bottom: 0;
+        
+        right: 10px;
+        width: 300px;
         background: white;
         display: flex;
         flex-direction: column;
         .chat_header
         {
-            background: #ffd04c;
+            cursor: pointer;
+            background: #9a9a9a54;
+            border: solid 1px gray;
             *
             {
                 color: black;
@@ -149,18 +168,19 @@ html,body
                 background: white;
                 border: solid 1px black;
                 width: 100%;
+                padding: 5px;
             }
             #sendbtn
             {
                 background: #ffd04c;
                 color: black; 
-                border: solid 1px black;
                 padding: 5px;
-
+                cursor: pointer;
             }
         }
         .chat
         {
+            border: solid 1px gray;
             height: 100%;
             overflow: auto;
             img
@@ -238,4 +258,3 @@ html,body
             }
         }
     }
-}
