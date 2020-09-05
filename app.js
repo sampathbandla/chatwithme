@@ -7,7 +7,7 @@ const session = require('express-session');
 require('dotenv').config()
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://sam:sssU9989@chatwithme-lzmgx.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.DB_URI;
 
 var mongoUtil = require(__dirname + "/database.js")
 
